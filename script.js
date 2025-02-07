@@ -194,6 +194,55 @@ function burger(){
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.strategy');
+  const dots = document.querySelectorAll('.carousel-indicators .dot');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active'); // Убираем активность с всех слайдов
+    });
+
+    slides[index].classList.add('active'); // Добавляем активность на текущий слайд
+
+    // Обновляем активную точку
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Переходим к следующему слайду
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Переход к предыдущему слайду
+    showSlide(currentIndex);
+  }
+
+  // Инициализация слайдера
+  showSlide(currentIndex);
+
+  // Обработчики событий для точек слайдера
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Переход к следующему/предыдущему слайду по кнопкам
+  setInterval(nextSlide, 5000); // Автоматический переход через 5 секунд
+});
+
+
+
+
+
+
+
 
 
 

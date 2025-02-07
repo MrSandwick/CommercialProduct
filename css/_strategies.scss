@@ -1,117 +1,94 @@
-.strategies{
+.strategies {
   background: linear-gradient(179.59deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
 }
 
-.strategies__container{
+.strategies__container {
   max-width: 1200px;
-  padding-top: 150px;
+  margin: 0 auto;
+  gap: 15px;
+  padding: 100px 50px 150px;
 }
 
-.strategies__container > .title{
-  font-family: Poppins;
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 51px;
-  letter-spacing: 0px;
-  text-align: left;
-}
-
-.strategies__container > .sub-title{
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: 0px;
-  text-align: left;
-  margin-bottom: 45px;
-}
-
-.strategies__list{
+.strategies__list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; /* Центрируем слайды */
   gap: 31px;
 }
 
-.strategy{
+/* Обычное отображение на больших экранах */
+.strategy {
   border: 1px solid #DEDEDE;
   border-radius: 8px;
   max-width: 351px;
+  flex-shrink: 0; /* Запрещаем сжать слайды */
+  opacity: 1;
+  display: block; /* Слайды показываются как обычные элементы */
 }
 
-.strategy__data{
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0px;
-  padding: 24px 0px 0px 24px;
-  color: var(--main-text);
-}
-
-.strategy__data > span:first-child{
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: 0px;
-  text-align: left;
-  color: var(--main-text);
-}
-
-.strategy__title{
-  font-family: Poppins;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0px;
-  padding: 12px 25px 40px 25px;
-  color: var(--main-text);
-}
-
-.strategy:nth-child(2) > .strategy__title{
-  color: var(--m-green);
-}
-
-.strategy__img > img{
-  -o-object-fit: cover;
-  object-fit: contain !important;
+.strategy__img > img {
+  object-fit: cover;
   max-width: 100%;
 }
 
-.carousel-indicators{
-  display: flex;
-  justify-content: center;
-  margin: 64px 0px 150px 0px;
-  gap: 10px;
+.strategy__data {
+  padding: 24px;
 }
 
-.carousel-indicators > .dot{
+.strategy__title {
+  padding: 12px 25px 40px 25px;
+}
+
+.carousel-indicators {
+  display: none; /* Скрываем кнопки (точки) слайдера по умолчанию */
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.carousel-indicators > .dot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #EFEFEF;
-  ;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 1024px){
-  .strategies__list{
-    flex-direction: column;
-    align-items: center;
+.carousel-indicators > .dot.active {
+  background: #333;
+}
+
+/* На экранах меньше или равно 1136px, слайдер становится активным */
+@media screen and (max-width: 1136px) {
+  .strategies__list {
+    display: flex;
+    overflow: hidden; /* Скрываем лишние слайды */
+    gap: 0; /* Убираем промежутки между слайдами */
+    width: 100%; /* Обеспечиваем, чтобы слайды не выходили за пределы */
   }
-  .strategies__container > .title{
+
+  .strategy {
+    flex: 0 0 100%; /* Слайды занимают 100% ширины экрана */
+    display: none; /* Скрываем слайды по умолчанию */
+  }
+
+  .strategy.active {
+    display: block; /* Показываем только активные слайды */
+  }
+
+  .carousel-indicators {
+    display: block;
+    margin-top: 20px;
     text-align: center;
   }
-  .strategies__container > .sub-title{
-    text-align: center;
+
+  .carousel-indicators > .dot {
+    display: inline-block;
+    margin: 0 5px;
   }
-}
-@media screen and (max-width: 768px){
 
-}
-@media screen and (max-width: 644px){
+  .strategies__container > .title,
+  .strategies__container > .sub-title {
+  text-align: center;
 
-}
-@media screen and (max-width: 348px){
-
+  }
 }
