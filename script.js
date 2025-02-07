@@ -194,6 +194,10 @@ function burger(){
 
 
 
+
+
+//Slider
+
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.strategy');
   const dots = document.querySelectorAll('.carousel-indicators .dot');
@@ -243,29 +247,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+//Загрузочный экран
 
 
+const loader = document.getElementById("loadscreen");
+const spans = document.getElementById("loadscreen");
+let finish = false;
 
-
-// Загрузочный экран
-
-// const body = document.getElementsByTagName("body")[0];
-// const loader = document.getElementById("loadscreen");
-// const spans = document.getElementById("loadscreen");
-// let finish = false;
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   finish = true;
-//   if(finish == true){
-//     const movetoTop = setInterval(function () {
-//       loader.style.top = "-100%"
-//       body.style.overflow = "visible"
-//       if(body.style.overflow = "visible"){
-//         spans.style.transform
-//       }
-//     }, 1000)
-//   }
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  finish = true;
+  if(finish == true){
+    const movetoTop = setInterval(function () {
+      loader.style.top = "-100%"
+      body.style.overflow = "visible"
+      if(body.style.overflow = "visible"){
+        spans.style.transform
+      }
+    }, 1000)
+  }
+});
 
 
 

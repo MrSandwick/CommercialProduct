@@ -145,16 +145,16 @@ li>a:active{
 @media screen and (max-width: 1024px){
   .nav__list { display: none ;}
   .header > .container {
-   justify-content: space-around;
- }
+    justify-content: space-around;
+  }
   .nav2{
     display: none;
   }
 }
 @media screen and (max-width: 768px){
- .header > .container {
-  justify-content: space-between;
- }
+  .header > .container {
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 644px){
 
