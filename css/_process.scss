@@ -8,7 +8,7 @@
   box-shadow: inset 0px 92px 32px -12px rgba(0,0,0,0.03);
 
   &__container {
-    padding-top: 50px;
+    padding: 50px;
     flex-direction: column; 
   }
 }
@@ -23,7 +23,6 @@
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 0px;
-  text-align: center;
   margin-bottom: 18px;
 }
 
@@ -32,7 +31,6 @@
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0px;
-  text-align: center;
   margin-bottom: 45px;
 }
 
@@ -53,12 +51,20 @@
 .message{
   display: flex;
   flex-direction: row;
+  align-items:center;
+  gap: 15px;
+}
+
+.message-text{
+  box-shadow: 0px 2px 15px 0px #173A561A;
+  background: #FFFFFF;
+  padding: 15px 25px;
+  border-radius: 25px;
 }
 
 .process__container > .btn-green{
   margin-top: 48px;
-  max-width: 216px;
-  max-height: 53px;
+  padding: 15px 30px;
 }
 
 
@@ -80,6 +86,11 @@
   .triangle-bottom svg{
     display: block !important;
     margin-bottom: 30px;
+  }
+  .process__container{
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
   }
 }
 @media screen and (max-width: 644px){

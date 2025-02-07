@@ -15,7 +15,7 @@
 .review_list{
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   gap: 60px;
 }
 
@@ -67,13 +67,17 @@
 }
 
 @media screen and (max-width: 1024px){
-  
+  .review_list{
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 768px){
-
+  
 }
 @media screen and (max-width: 644px){
-
+  .container{
+    max-width: fit-content;
+  }
 }
 @media screen and (max-width: 348px){
 

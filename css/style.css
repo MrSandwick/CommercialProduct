@@ -30,6 +30,10 @@ body {
   overflow-x: hidden;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .wrapper {
   min-width: 320px;
   position: relative;
@@ -97,42 +101,23 @@ button {
   background-color: #173A56;
   z-index: 6;
   border-radius: 50%;
-  -webkit-animation-name: wave;
-          animation-name: wave;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
   transform: none;
 }
 
 span:first-child {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 span:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 span:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-@-webkit-keyframes wave {
-  33.33% {
-    transform: translateY(3px);
-  }
-  33.33% {
-    transform: translateY(6px);
-  }
-  33.33% {
-    transform: translateY(9px);
-  }
+  animation-delay: 0.6s;
 }
 
 @keyframes wave {
@@ -252,7 +237,6 @@ span:nth-child(3) {
 }
 
 .burger {
-  position: -webkit-sticky;
   position: sticky;
   display: none;
   align-items: center;
@@ -571,6 +555,9 @@ li > a:active {
     display: flex;
     justify-content: space-between;
   }
+  .hero {
+    padding: 32px;
+  }
 }
 @media screen and (max-width: 348px) {
   .btn__wrapper {
@@ -597,6 +584,7 @@ li > a:active {
   gap: 60px;
   max-width: 1200px;
   margin-bottom: 50px;
+  padding: 0 50px;
 }
 
 .specials__container .special-title {
@@ -794,44 +782,21 @@ form {
     border-radius: 78% 22% 84% 16%/27% 68% 32% 73%;
     padding: 50px;
     margin: 0px 70px;
-    -webkit-animation: borderlife1 20s ease-in-out infinite;
-            animation: borderlife1 20s ease-in-out infinite;
+    animation: borderlife1 20s ease-in-out infinite;
   }
   .costumer {
     background: linear-gradient(45deg, rgb(0, 214, 190) 0%, rgb(250, 186, 186) 70%);
     border-radius: 78% 22% 47% 53%/35% 56% 44% 65%;
     padding: 50px;
     margin: 0px 70px;
-    -webkit-animation: borderlife2 20s ease-in-out infinite;
-            animation: borderlife2 20s ease-in-out infinite;
+    animation: borderlife2 20s ease-in-out infinite;
   }
   .collaborative {
     background: linear-gradient(299deg, rgb(0, 214, 190) 0%, rgb(250, 186, 186) 70%);
     border-radius: 78% 22% 14% 86%/74% 22% 78% 26%;
     padding: 50px;
     margin: 0px 70px;
-    -webkit-animation: borderlife3 20s ease-in-out infinite;
-            animation: borderlife3 20s ease-in-out infinite;
-  }
-  @-webkit-keyframes borderlife1 {
-    0% {
-      border-radius: 78% 22% 84% 16%/27% 68% 32% 73%;
-    }
-    20% {
-      border-radius: 30% 70% 62% 38%/81% 43% 57% 19%;
-    }
-    40% {
-      border-radius: 30% 70% 24% 76%/35% 43% 57% 65%;
-    }
-    60% {
-      border-radius: 30% 70% 78% 22%/35% 39% 61% 65%;
-    }
-    80% {
-      border-radius: 30% 70% 41% 59%/50% 26% 74% 50%;
-    }
-    100% {
-      border-radius: 78% 22% 84% 16%/27% 68% 32% 73%;
-    }
+    animation: borderlife3 20s ease-in-out infinite;
   }
   @keyframes borderlife1 {
     0% {
@@ -853,26 +818,6 @@ form {
       border-radius: 78% 22% 84% 16%/27% 68% 32% 73%;
     }
   }
-  @-webkit-keyframes borderlife2 {
-    0% {
-      border-radius: 78% 22% 47% 53%/35% 56% 44% 65%;
-    }
-    20% {
-      border-radius: 30% 70% 40% 60%/59% 63% 37% 41%;
-    }
-    40% {
-      border-radius: 65% 35% 76% 24%/14% 63% 37% 86%;
-    }
-    60% {
-      border-radius: 65% 35% 22% 78%/61% 81% 19% 39%;
-    }
-    80% {
-      border-radius: 31% 69% 88% 12%/89% 20% 80% 11%;
-    }
-    100% {
-      border-radius: 78% 22% 47% 53%/35% 56% 44% 65%;
-    }
-  }
   @keyframes borderlife2 {
     0% {
       border-radius: 78% 22% 47% 53%/35% 56% 44% 65%;
@@ -891,26 +836,6 @@ form {
     }
     100% {
       border-radius: 78% 22% 47% 53%/35% 56% 44% 65%;
-    }
-  }
-  @-webkit-keyframes borderlife3 {
-    0% {
-      border-radius: 78% 22% 14% 86%/74% 22% 78% 26%;
-    }
-    20% {
-      border-radius: 82% 18% 32% 68%/49% 20% 80% 51%;
-    }
-    40% {
-      border-radius: 31% 69% 82% 18%/85% 42% 58% 15%;
-    }
-    60% {
-      border-radius: 52% 48% 47% 53%/13% 42% 58% 87%;
-    }
-    80% {
-      border-radius: 76% 24% 7% 93%/50% 17% 83% 50%;
-    }
-    100% {
-      border-radius: 78% 22% 14% 86%/74% 22% 78% 26%;
     }
   }
   @keyframes borderlife3 {
@@ -969,7 +894,7 @@ form {
   box-shadow: inset 0px 92px 32px -12px rgba(0, 0, 0, 0.03);
 }
 .process__container {
-  padding-top: 50px;
+  padding: 50px;
   flex-direction: column;
 }
 
@@ -983,7 +908,6 @@ form {
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 0px;
-  text-align: center;
   margin-bottom: 18px;
 }
 
@@ -992,7 +916,6 @@ form {
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0px;
-  text-align: center;
   margin-bottom: 45px;
 }
 
@@ -1013,12 +936,20 @@ form {
 .message {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.message-text {
+  box-shadow: 0px 2px 15px 0px rgba(23, 58, 86, 0.1019607843);
+  background: #FFFFFF;
+  padding: 15px 25px;
+  border-radius: 25px;
 }
 
 .process__container > .btn-green {
   margin-top: 48px;
-  max-width: 216px;
-  max-height: 53px;
+  padding: 15px 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1034,6 +965,12 @@ form {
   .triangle-bottom svg {
     display: block !important;
     margin-bottom: 30px;
+  }
+  .process__container {
+    display: flex;
+    align-items: center;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
 }
 .triangle-bottom {
@@ -1059,7 +996,6 @@ form {
 
 .strategies__container {
   max-width: 1200px;
-  padding-top: 150px;
 }
 
 .strategies__container > .title {
@@ -1296,7 +1232,6 @@ form {
 .review_list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 60px;
 }
 
@@ -1348,6 +1283,17 @@ form {
   color: #252B42;
 }
 
+@media screen and (max-width: 1024px) {
+  .review_list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 644px) {
+  .container {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
 .join {
   display: flex;
   justify-content: center;
@@ -1436,10 +1382,19 @@ form {
   gap: 25px;
 }
 
-.footer-category:nth-child(2), .footer-category:nth-child(3), .footer-category__list {
+.footer-category:nth-child(3), .footer-category__list {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.footer-category:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-category:nth-child(4) {

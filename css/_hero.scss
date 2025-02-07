@@ -72,7 +72,10 @@
   .btn__wrapper{
     display: flex;
     justify-content: space-between;
-   }
+  }
+  .hero{
+    padding: 32px;
+  }
 }
 @media screen and (max-width: 768px){
 
