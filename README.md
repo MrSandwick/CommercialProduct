@@ -4,7 +4,7 @@ This project is a front-end development website designed for commercial product 
 
 ## Table of Contents
 
-- [Features](#key-features-of-the-project-includeKey features of the project include)
+- [Features](#key-features-of-the-project-include)
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Functions](#functions)
@@ -32,5 +32,30 @@ This project is a front-end development website designed for commercial product 
 - **Loading Screen:**  A smooth transition with a loading screen that disappears once the content is fully loaded.
 
 # Structure
-
-COMMERCIALPRODUCT/ │── css/ # Project styles │ │── _burger.scss # Styles for the burger menu │ │── _footer.scss # Styles for the footer section │ │── _header.scss # Styles for the header section │ │── _hero.scss # Styles for the hero section │ │── _info.scss # Styles for the info section │ │── _join.scss # Styles for the join section │ │── _jsclass.scss # Additional styles for JS elements │ │── _null.scss # CSS reset │ │── _prices.scss # Styles for the pricing section │ │── _process.scss # Styles for the process section │ │── _reviews.scss # Styles for the reviews section │ │── _specials.scss # Styles for the specials section │ │── _strategies.scss # Styles for the strategies section │ │── style.css # Compiled CSS file │ │── style.css.map # CSS source map │ │── style.scss # Main SCSS file │ │── img/ # Images directory │ │── Dark mode/ # Images for dark mode │ │── Original img/ # Original images │ │── index.html # Main HTML file │── README.md # Project documentation │── script.js # Main JavaScript file
+```bash
+COMMERCIALPRODUCT/
+├── index.html
+├── css/
+│   ├── _burger.scss
+│   ├── _footer.scss
+│   ├── _header.scss
+│   ├── _hero.scss
+│   ├── _info.scss
+│   ├── _join.scss
+│   ├── _jsclass.scss
+│   ├── _null.scss
+│   ├── _prices.scss
+│   ├── _process.scss
+│   ├── _reviews.scss
+│   ├── _specials.scss
+│   ├── _strategies.scss
+│   ├── style.css
+│   ├── style.css.map
+│   └── style.scss
+├── img/
+│   ├── Dark mode/
+│   └── Original img/
+├── js/
+│   └── script.js
+└── README.md
+```
