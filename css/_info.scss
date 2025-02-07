@@ -1,0 +1,199 @@
+.info__container > div{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 80px;
+  margin: 150px 15px 0px 15px;
+}
+
+.managment-left, .costumer-right, .collaborative-left{
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.folders{
+  background: linear-gradient(299deg, rgba(0,214,190,1) 0%, rgba(250,186,186,1) 70%);
+  border-radius: 78% 22% 84% 16% / 27% 68% 32% 73% ;
+
+}
+
+.document{ 
+  background: linear-gradient(45deg, rgba(0,214,190,1) 0%, rgba(250,186,186,1) 70%);
+  border-radius: 78% 22% 47% 53% / 35% 56% 44% 65%;
+ 
+}
+
+.laptop{
+  background: linear-gradient(299deg, rgba(0,214,190,1) 0%, rgba(250,186,186,1) 70%);
+  border-radius: 78% 22% 14% 86% / 74% 22% 78% 26% ;
+
+}
+
+.img__info img{
+  padding: 60px;
+}
+
+.info__uppertitle{
+  font-weight: 600;
+  font-size: 16px;
+}
+.info__title{
+  color: #22343D;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.info__subtitle{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.info__text{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.costumer-right .info__text{
+  margin-left: 50px;
+}
+
+// Галочки для раздела Costumer Support
+
+.costumer-right .info__text:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background:url('../img/Original img/icon yellow.png') no-repeat;
+  background-size: contain;
+  left: 0px;
+}
+
+.costumer-right .info__text:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background:url('../img/Original img/icon red.png') no-repeat;
+  background-size: contain;
+  left: 0px;
+}
+
+.costumer-right .info__text:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background:url('../img/Original img/icon blue.png') no-repeat;
+  background-size: contain;
+  left: 0px;
+}
+
+.costumer-right{
+  position: relative;
+}
+
+
+
+// Адаптив
+
+@media screen and (max-width: 1024px){
+  .info__container > div{margin: 0px 70px;}
+  .info__container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .img__info {
+    display: none;
+  }
+  .managment{
+    background: linear-gradient(299deg, rgba(0,214,190,1) 0%, rgba(250,186,186,1) 70%);
+    border-radius: 78% 22% 84% 16% / 27% 68% 32% 73%;
+    padding: 50px;
+    margin: 0px 70px;
+    animation: borderlife1 20s ease-in-out infinite;
+  }
+  .costumer{
+    background: linear-gradient(45deg, rgba(0,214,190,1) 0%, rgba(250,186,186,1) 70%);
+    border-radius: 78% 22% 47% 53% / 35% 56% 44% 65%;
+    padding: 50px;
+    margin: 0px 70px;
+    animation: borderlife2 20s ease-in-out infinite;
+  }
+  .collaborative{
+    background: linear-gradient(299deg, rgba(0,214,190,1) 0%, rgba(250,186,186,1) 70%);
+    border-radius: 78% 22% 14% 86% / 74% 22% 78% 26%;
+    padding: 50px;
+    margin: 0px 70px;
+    animation: borderlife3 20s ease-in-out infinite;
+  }
+
+  @keyframes borderlife1{
+    0%{border-radius: 78% 22% 84% 16% / 27% 68% 32% 73%}
+    20%{border-radius: 30% 70% 62% 38% / 81% 43% 57% 19%}
+    40%{border-radius: 30% 70% 24% 76% / 35% 43% 57% 65%}
+    60%{border-radius: 30% 70% 78% 22% / 35% 39% 61% 65% }
+    80%{border-radius: 30% 70% 41% 59% / 50% 26% 74% 50%}
+    100%{border-radius: 78% 22% 84% 16% / 27% 68% 32% 73%}
+  }
+
+  @keyframes borderlife2{
+    0%{border-radius: 78% 22% 47% 53% / 35% 56% 44% 65%}
+    20%{border-radius: 30% 70% 40% 60% / 59% 63% 37% 41%}
+    40%{border-radius: 65% 35% 76% 24% / 14% 63% 37% 86%}
+    60%{border-radius: 65% 35% 22% 78% / 61% 81% 19% 39%}
+    80%{border-radius: 31% 69% 88% 12% / 89% 20% 80% 11%}
+    100%{border-radius: 78% 22% 47% 53% / 35% 56% 44% 65%}
+  }
+
+  @keyframes borderlife3{
+    0%{border-radius: 78% 22% 14% 86% / 74% 22% 78% 26%}
+    20%{border-radius: 82% 18% 32% 68% / 49% 20% 80% 51%}
+    40%{border-radius: 31% 69% 82% 18% / 85% 42% 58% 15%}
+    60%{border-radius: 52% 48% 47% 53% / 13% 42% 58% 87%}
+    80%{border-radius: 76% 24% 7% 93% / 50% 17% 83% 50%}
+    100%{border-radius: 78% 22% 14% 86% / 74% 22% 78% 26%}
+  }
+}
+
+@media screen and (max-width: 768px){
+  .info__container > div{margin-top: 0px;}
+  .info__container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 644px){
+
+}
+@media screen and (max-width: 348px){
+
+}
+
+
+.triangle-bottom{
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.triangle-bottom svg {
+  display: none;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.triangle-bottom .shape-fill {
+  fill: #E5E5E5;
+}
+

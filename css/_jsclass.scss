@@ -1,0 +1,65 @@
+
+/* Navbar buttons */
+
+.nav2-js button:first-child{
+  color: #bcd0e5;
+  background-color: transparent;
+  font-weight: 600;
+  border: 1px solid #bcd0e5;
+}
+
+.nav2-js button:first-child:hover {
+  background-color: #635C72;
+}
+
+.nav2-js{
+  display: flex;
+  align-items:center;
+  gap: 24px;
+}
+
+@media screen and (max-width: 1024px){
+  .nav2-js{display: none;}
+}
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 644px){
+
+}
+@media screen and (max-width: 348px){
+
+}
+
+/* Green buttons hover */
+
+.nav2 div:last-child{
+  background-color: #02897A;
+  padding: 10px 23px;
+  border-radius: 5px;
+}
+
+.btn-green-js {
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  background-color: #02897A;
+  color: #fff;
+  transition: .1s ease-in;
+}
+
+.hero .btn-green-js {
+  padding: 16px 40px;
+}
+
+.btn-green-js:hover{
+  background-color: #95B46A !important;
+}
+
+.specials .btn-green-js{
+  display: inline-flex;
+  text-transform: uppercase;
+  background-color: #02897A;
+  padding: 15px 35px;
+  cursor: pointer;
+}
