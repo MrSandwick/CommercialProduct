@@ -996,6 +996,7 @@ form {
 
 .strategies__container {
   max-width: 1200px;
+  padding-top: 150px;
 }
 
 .strategies__container > .title {

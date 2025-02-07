@@ -71,7 +71,7 @@ const themes = {
     watchBtnColor: '#02897a',
     playImgSrc: 'img/Original img/play.png',
     mainWrapperBg: "white",
-    processBackBg: "#E5E5E5",
+    processBackBg: "#EDEDED",
     strategiesBackBg: 'var(--main-back-gradient)',
     joinBtnBg: 'var(--white)',
     joinBtnColor: 'var(--m-green)',
@@ -169,6 +169,11 @@ applyTheme(position); // Применить начальную тему
 
 
 
+
+
+
+
+
 //  Бургер 
 
 const BigMac = document.querySelector('.burger');
@@ -184,6 +189,9 @@ function burger(){
     body.style.overflow = 'scroll'
   }
 }
+
+
+
 
 
 
